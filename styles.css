@@ -24,6 +24,16 @@ body {
     background-color: var(--light-gray);
     padding: 0.1rem;
 }
+body {
+    background-color: white; /* Example background for larger screens */
+}
+
+/* Hide content for screens smaller than 1025px (tablets and mobiles) */
+@media only screen and (max-width: 1024px) {
+    body {
+        display: none; /* Hide everything on screens smaller than 1025px */
+    }
+}
 
 
 .header-content {
