@@ -24,11 +24,6 @@ body {
     background-color: var(--light-gray);
     padding: 0.1rem;
 }
-body {
-    background-color: white; /* Example background for larger screens */
-}
-
-
 /* Default visibility for the mobile message - hidden on large screens */
 .mobile-only-message {
     display: none; /* Hide by default */
@@ -47,9 +42,19 @@ body {
 
     /* Hide the rest of the content */
     body {
-        display: none; /* Hide everything else on smaller screens */
+        background-color: #000; /* Blank screen on mobile */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Hide the main content */
+    .main-content {
+        display: none;
     }
 }
+
 
 
 
