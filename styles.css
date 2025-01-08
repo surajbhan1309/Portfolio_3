@@ -29,17 +29,28 @@ body {
 }
 
 
-/* Default styles for laptop and larger screens */
-.laptop-only-message {
-    display: block; /* Show the message on laptops and desktops */
+/* Default visibility for the mobile message - hidden on large screens */
+.mobile-only-message {
+    display: none; /* Hide by default */
 }
 
-/* Hide message on smaller screens (tablet and mobile) */
+/* Show the message on smaller screens (mobile/tablet) */
 @media only screen and (max-width: 1024px) {
-    .laptop-only-message {
-        display: none; /* Hide the message on screens smaller than 1025px */
+    .mobile-only-message {
+        display: block; /* Show the message on smaller screens */
+        background-color: #f8d7da;
+        padding: 20px;
+        text-align: center;
+        font-size: 18px;
+        color: #721c24;
+    }
+
+    /* Hide the rest of the content */
+    body {
+        display: none; /* Hide everything else on smaller screens */
     }
 }
+
 
 
 
