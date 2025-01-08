@@ -28,12 +28,19 @@ body {
     background-color: white; /* Example background for larger screens */
 }
 
-/* Hide content for screens smaller than 1025px (tablets and mobiles) */
+
+/* Default styles for laptop and larger screens */
+.laptop-only-message {
+    display: block; /* Show the message on laptops and desktops */
+}
+
+/* Hide message on smaller screens (tablet and mobile) */
 @media only screen and (max-width: 1024px) {
-    body {
-        display: none; /* Hide everything on screens smaller than 1025px */
+    .laptop-only-message {
+        display: none; /* Hide the message on screens smaller than 1025px */
     }
 }
+
 
 
 .header-content {
